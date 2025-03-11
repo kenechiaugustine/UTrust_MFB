@@ -1,0 +1,12 @@
+.Login-page {
+  display: flex;
+}
+
+.Login-image img {
+  width: 40%;
+  height: 99.97vh;
+}
+
+.Login-image img {
+  /* width: 300px; */
+}

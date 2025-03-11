@@ -1,0 +1,21 @@
+.Landing-Container {
+  height: 100vh;
+  background: #5e9b02;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

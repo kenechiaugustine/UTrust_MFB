@@ -1,9 +1,8 @@
-//
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from './pages/auth/login';
 import LandingPage from './pages/landing';
 import Register from './pages/auth/register';
 import Dashboard from './pages/dashboard';
+import LoginPage from './pages/auth/login';
 
 export const RouterConfig = () => {
   return (
@@ -23,7 +22,7 @@ export const RouterConfig = () => {
             path="/login"
             element={
               <>
-                <Login />
+                <LoginPage />
               </>
             }
           />

@@ -1,5 +1,4 @@
-import "./App.css";
-import { RouterConfig } from "./route";
+import { RouterConfig } from "./routes";
 
 function App() {
   return (

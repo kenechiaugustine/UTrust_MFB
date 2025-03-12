@@ -2,11 +2,43 @@
   display: flex;
 }
 
-.Login-image img {
-  width: 40%;
+.Login-image-section {
+  background-image: url('/public/landing-background-image.jpg');
+  /* background-position: center; */
+  width: 50%;
   height: 99.97vh;
 }
 
-.Login-image img {
-  /* width: 300px; */
+.Login-form-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 99.97vh;
+}
+
+.form-title {
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 1002px) {
+  .Login-image-section {
+    display: none;
+  }
+
+  .Login-form-section {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 484px) {
+  .Login-form-section h2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 413px) {
+  .Login-form-section h2 {
+    font-size: 100%;
+  }
 }

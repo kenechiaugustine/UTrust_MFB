@@ -1,0 +1,60 @@
+.InputComponent {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.InputComponent .label {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: grey;
+}
+
+.InputComponent .input {
+  padding: 0px 10px;
+  height: 50px;
+  border-radius: 8px;
+  color: black;
+  border: 0.5px solid gray;
+  outline: none;
+}
+
+.InputComponent .error {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: red;
+}
+
+.InputComponent .passwordInputWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  height: 50px;
+  border-radius: 8px;
+  color: black;
+  border: 0.5px solid gray;
+  margin-bottom: 20px;
+}
+
+.InputComponent .passwordInput {
+  height: 100%;
+  width: 100%;
+  color: black;
+  background: transparent;
+  outline: none;
+}
+
+.InputComponent .iconButton {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: white;
+}

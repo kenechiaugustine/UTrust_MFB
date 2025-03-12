@@ -31,7 +31,7 @@ export const CustomPasswordInput = ({ placeholder, labelText, errorMessage }: IF
       {labelText && <label className="label">{labelText}</label>}
       <div className="passwordInputWrap">
         <input type={showPassword ? 'text' : 'password'} className="passwordInput" placeholder={placeholder} />
-        <button className="iconButton" type='button' onClick={() => setShowPassword((prev) => !prev)}>
+        <button className="iconButton" type="button" onClick={() => setShowPassword((prev) => !prev)}>
           {showPassword ? <FaEye /> : <FaEyeSlash />}
         </button>
       </div>

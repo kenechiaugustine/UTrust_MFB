@@ -4,8 +4,11 @@ import { CustomInput, CustomPasswordInput } from '../../../components/custom-inp
 import { useFormik } from 'formik';
 import { LoginValidationSchema } from './login-validation';
 import Button from '../../../components/custom-button';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage: React.FC = () => {
+  const navigate = useNavigate();
+
   const onSubmit = () => {};
 
   const { values, handleChange, touched, errors, handleSubmit } = useFormik({
@@ -19,9 +22,9 @@ const LoginPage: React.FC = () => {
 
   return (
     <div className="Login-page">
-      <div className="Login-image-section"></div>
+      <div className="Image-section"></div>
 
-      <div className="Login-form-section">
+      <div className="Form-section">
         <div>
           <h2 className="form-title">Welcome Back, Please login to continue</h2>
 
@@ -47,10 +50,17 @@ const LoginPage: React.FC = () => {
                 handleSubmit();
               }}
               isLoading={false}
-              text="Sign In"
-              type='submit'
+              text="Login"
+              type="submit"
             />
           </form>
+
+          <p className="account-link">
+            Don't Have An Account?{' '}
+            <span onClick={() => navigate('/register')} className=" underline cursor-pointer">
+              Sign Up
+            </span>
+          </p>
         </div>
       </div>
     </div>

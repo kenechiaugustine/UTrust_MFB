@@ -1,0 +1,67 @@
+.Register-page {
+  display: flex;
+}
+
+.Image-section {
+  background-image: url('/public/landing-background-image.jpg');
+  /* background-position: center; */
+  width: 50%;
+  height: 99.97vh;
+}
+
+.Form-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 99.97vh;
+}
+
+.Form-section > div {
+  width: 60%;
+}
+
+p.account-link {
+  text-align: center;
+  padding-top: 5px;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #121212;
+}
+
+p.account-link span {
+  cursor: pointer;
+  color: blue;
+}
+
+.form-title {
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1002px) {
+  .Image-section {
+    display: none;
+  }
+
+  .Form-section {
+    width: 100%;
+  }
+
+  .Form-section > div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 484px) {
+  .Form-section h2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 413px) {
+  .Form-section h2 {
+    font-size: 100%;
+  }
+}

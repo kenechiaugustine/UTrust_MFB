@@ -3,7 +3,7 @@
 }
 
 .Image-section {
-  background-image: url('/public/landing-background-image.jpg');
+  background-image: url('/landing-background-image.jpg');
   /* background-position: center; */
   width: 50%;
   height: 99.97vh;

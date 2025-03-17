@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './index.css';
+import { ImSpinner9 } from 'react-icons/im';
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -7,14 +9,17 @@ function LandingPage() {
   useEffect(() => {
     setInterval(() => {
       setRedirect(true);
-    }, 2000);
+    }, 2200);
   });
 
   return (
     <>
-      {redirect && navigate("/login", { replace: true })}
-      <div>
-        <h1>UTrust Bank</h1>
+      {redirect && navigate('/login', { replace: true })}
+      <div className="Landing_Container">
+        <div>
+          <h1>UTrust MFB v1</h1>
+          <ImSpinner9 className={'loader'} size={25} />
+        </div>
       </div>
     </>
   );

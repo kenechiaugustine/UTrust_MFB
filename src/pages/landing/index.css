@@ -1,9 +1,15 @@
-.Landing-Container {
+.Landing_Container {
   height: 100vh;
-  background: #5e9b02;
+  background: var(--color-primary);
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+}
+
+.Landing_Container > div {
+  display: flex;
+  gap: 3px;
 }
 
 svg {

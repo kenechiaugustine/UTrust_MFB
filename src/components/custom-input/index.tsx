@@ -19,23 +19,23 @@ export const CustomInput = ({ placeholder, labelText, errorMessage, onChange, va
     <div className="InputComponent">
       {labelText && <label className="label">{labelText}</label>}
       <input className="input" placeholder={placeholder} onChange={onChange} value={value} />
-      {/* {errorMessage && <p className="error">{errorMessage}</p>} */}
+      {errorMessage && <p className="error">{errorMessage}</p>}
     </div>
   );
 };
 
-export const CustomPasswordInput = ({ placeholder, labelText, errorMessage }: IFormInput) => {
+export const CustomPasswordInput = ({ placeholder, labelText, errorMessage, ...rest }: IFormInput) => {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <div className="InputComponent">
       {labelText && <label className="label">{labelText}</label>}
       <div className="passwordInputWrap">
-        <input type={showPassword ? 'text' : 'password'} className="passwordInput" placeholder={placeholder} />
+        <input type={showPassword ? 'text' : 'password'} className="passwordInput" placeholder={placeholder} {...rest} />
         <button className="iconButton" type="button" onClick={() => setShowPassword((prev) => !prev)}>
           {showPassword ? <FaEye /> : <FaEyeSlash />}
         </button>
       </div>
-      {/* {errorMessage && <p className='error'>{errorMessage}</p>} */}
+      {errorMessage && <p className="error">{errorMessage}</p>}
     </div>
   );
 };

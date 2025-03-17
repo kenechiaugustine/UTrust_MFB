@@ -18,13 +18,13 @@ export const RegisterValidationSchema = yup.object({
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9])(?=.{8,})/,
       'Must Contain 8 Characters, Uppercase, Lowercase, Number and Special Character',
     ),
-  confirmPassword: yup
-    .string()
-    .label('Confirm new password')
-    .required()
-    .matches(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9])(?=.{8,})/,
-      'Must Contain 8 Characters, Uppercase, Lowercase, Number and Special Character',
-    )
-    .oneOf([yup.ref('password')], 'Passwords must match'),
+  // confirmPassword: yup
+  //   .string()
+  //   .label('Confirm new password')
+  //   .required()
+  //   .matches(
+  //     /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9])(?=.{8,})/,
+  //     'Must Contain 8 Characters, Uppercase, Lowercase, Number and Special Character',
+  //   )
+  //   .oneOf([yup.ref('password')], 'Passwords must match'),
 });

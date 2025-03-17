@@ -4,7 +4,7 @@ import Modal from '..';
 import { CustomInput } from '../../custom-input';
 import Button from '../../custom-button';
 import { useFormik } from 'formik';
-import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
+import { useAppDispatch } from '../../../redux/hooks';
 import { useDepositMutation } from '../../../redux/account/accountApi';
 import { setUser } from '../../../redux/auth/authSlice';
 import { showErrorToast, showSuccessToast } from '../../../utils/toast';

@@ -35,7 +35,7 @@ const RegisterPage: React.FC = () => {
       });
   };
 
-  const { values, handleChange, touched, errors, handleSubmit } = useFormik({
+  const { values, handleChange, touched, errors } = useFormik({
     initialValues: {
       email: '',
       firstName: '',

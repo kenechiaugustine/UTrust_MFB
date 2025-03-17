@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './index.css';
 import { FaCircle, FaClone, FaEye, FaPlus, FaEyeSlash } from 'react-icons/fa6';
 import { currencyFormatter, getAuthToken } from '../../utils/helpers';
-import { useAppSelector } from '../../redux/hooks';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { DepositModal } from '../../components/modal/deposit-modal';

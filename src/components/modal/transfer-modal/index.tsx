@@ -3,7 +3,7 @@ import Modal from '..';
 import { CustomInput } from '../../custom-input';
 import Button from '../../custom-button';
 import { useFormik } from 'formik';
-import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
+import { useAppDispatch } from '../../../redux/hooks';
 import { useTransferMutation, useVerifyAccountMutation } from '../../../redux/account/accountApi';
 import { BiTransfer } from 'react-icons/bi';
 import { showErrorToast, showSuccessToast } from '../../../utils/toast';
@@ -56,7 +56,7 @@ export const TransferModal: React.FC<{ onTransactionComplete: () => void }> = ({
       });
   };
 
-  const { values, handleChange, touched, errors, handleSubmit, setFieldValue } = useFormik({
+  const { values, handleChange, errors, handleSubmit, setFieldValue } = useFormik({
     initialValues: {
       //   senderId: '',
       amount: '',

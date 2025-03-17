@@ -6,10 +6,10 @@ import { LoginValidationSchema } from './login-validation';
 import Button from '../../../components/custom-button';
 import { useNavigate } from 'react-router-dom';
 import { showErrorToast, showSuccessToast } from '../../../utils/toast';
-import { useLoginMutation } from '../../../store/auth/authApi';
+import { useLoginMutation } from '../../../redux/auth/authApi';
 import { setAuthToken } from '../../../utils/helpers';
-import { useAppDispatch } from '../../../store/hooks';
-import { setUser } from '../../../store/auth';
+import { useAppDispatch } from '../../../redux/hooks';
+import { setUser } from '../../../redux/auth/authSlice';
 
 const LoginPage: React.FC = () => {
   const navigate = useNavigate();

@@ -5,7 +5,7 @@ import { useFormik } from 'formik';
 import Button from '../../../components/custom-button';
 import { RegisterValidationSchema } from './register-validation';
 import { useNavigate } from 'react-router-dom';
-import { useRegisterMutation } from '../../../store/auth/authApi';
+import { useRegisterMutation } from '../../../redux/auth/authApi';
 import { setAuthToken } from '../../../utils/helpers';
 import { showErrorToast, showSuccessToast } from '../../../utils/toast';
 

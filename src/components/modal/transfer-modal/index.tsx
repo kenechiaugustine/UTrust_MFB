@@ -3,11 +3,11 @@ import Modal from '..';
 import { CustomInput } from '../../custom-input';
 import Button from '../../custom-button';
 import { useFormik } from 'formik';
-import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import { useTransferMutation, useVerifyAccountMutation } from '../../../store/account/accountApi';
+import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
+import { useTransferMutation, useVerifyAccountMutation } from '../../../redux/account/accountApi';
 import { BiTransfer } from 'react-icons/bi';
 import { showErrorToast, showSuccessToast } from '../../../utils/toast';
-import { setUser } from '../../../store/auth';
+import { setUser } from '../../../redux/auth/authSlice';
 
 export const TransferModal: React.FC<{ onTransactionComplete: () => void }> = ({ onTransactionComplete }) => {
   const [isTransferModalOpen, setIsTransferModalOpen] = useState(false);

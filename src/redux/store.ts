@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query/react';
-import auth from './auth';
+import auth from './auth/authSlice';
 import { authApi } from './auth/authApi';
 import { accountApi } from './account/accountApi';
 import { transactionsApi } from './transactions/transactionsApi';

@@ -4,9 +4,9 @@ import Modal from '..';
 import { CustomInput } from '../../custom-input';
 import Button from '../../custom-button';
 import { useFormik } from 'formik';
-import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import { useWithdrawMutation } from '../../../store/account/accountApi';
-import { setUser } from '../../../store/auth';
+import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
+import { useWithdrawMutation } from '../../../redux/account/accountApi';
+import { setUser } from '../../../redux/auth/authSlice';
 import { CiBank } from 'react-icons/ci';
 import { showErrorToast, showSuccessToast } from '../../../utils/toast';
 

@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import './index.css';
 import { FaCircle, FaClone, FaEye, FaPlus, FaEyeSlash } from 'react-icons/fa6';
 import { currencyFormatter, getAuthToken } from '../../utils/helpers';
-import { useAppSelector } from '../../store/hooks';
+import { useAppSelector } from '../../redux/hooks';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { DepositModal } from '../../components/modal/deposit-modal';
 import { WithdrawModal } from '../../components/modal/withdraw-modal';
 import { TransferModal } from '../../components/modal/transfer-modal';
 import TransactionBox from '../../components/transaction-box';
-import { useGetTransactionsQuery } from '../../store/transactions/transactionsApi';
+import { useGetTransactionsQuery } from '../../redux/transactions/transactionsApi';
 import { Loader } from '../../components/loader';
 import { showInfoToast } from '../../utils/toast';
 

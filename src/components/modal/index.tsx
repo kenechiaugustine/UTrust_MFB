@@ -34,7 +34,6 @@ const Modal: React.FC<{ isOpen: boolean; onClose: () => void; children: React.Re
   return ReactDOM.createPortal(
     <div className="modal-overlay">
       <div className="modal" ref={modalRef}>
-        {' '}
         <div className="modal-header">
           <button className="modal-close-button" onClick={onClose}>
             ×

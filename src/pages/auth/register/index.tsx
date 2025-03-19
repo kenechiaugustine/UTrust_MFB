@@ -35,7 +35,7 @@ const RegisterPage: React.FC = () => {
       });
   };
 
-  const { values, handleChange, touched, errors } = useFormik({
+  const { values, handleChange, touched, errors, handleSubmit } = useFormik({
     initialValues: {
       email: '',
       firstName: '',
@@ -57,7 +57,7 @@ const RegisterPage: React.FC = () => {
 
           <p>Kindly fill the form to Open an account</p>
 
-          <div className="form-container">
+          <form onSubmit={handleSubmit} className="form-container">
             <CustomInput
               placeholder="Enter your firstName"
               value={values.firstName}
@@ -100,17 +100,17 @@ const RegisterPage: React.FC = () => {
 
             <Button
               onClick={() => {
-                onSubmit();
+                handleSubmit();
               }}
               isLoading={isLoading}
               text="Register"
               type="submit"
             />
-          </div>
+          </form>
 
           <p className="account-link">
             Already Have An Account?{' '}
-            <span onClick={() => navigate('/login')} className=" underline cursor-pointer">
+            <span onClick={() => navigate('/login')} className="underline cursor-pointer">
               Sign In
             </span>
           </p>

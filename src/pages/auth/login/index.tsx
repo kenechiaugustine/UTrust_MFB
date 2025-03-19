@@ -40,6 +40,7 @@ const LoginPage: React.FC = () => {
     initialValues: {
       email: '',
       password: '',
+      errorMessage: '',
     },
     validationSchema: LoginValidationSchema,
     onSubmit,
@@ -51,13 +52,13 @@ const LoginPage: React.FC = () => {
       <div className="Form-section">
         <div>
           <h2 className="form-title">Welcome Back, Please login to continue</h2>
-          <form className="form-container">
+          <form className="form-container" onSubmit={handleSubmit}>
             <CustomInput
               placeholder="Enter Email"
               value={values.email}
               labelText="Enter your Email"
               onChange={handleChange('email')}
-              errorMessage={touched.email ? errors.email : ''}
+              // errorMessage={touched.email ? errors.email : ''}
             />
 
             <CustomPasswordInput
@@ -65,7 +66,7 @@ const LoginPage: React.FC = () => {
               value={values.password}
               labelText="Enter your Password"
               onChange={handleChange('password')}
-              errorMessage={touched.password ? errors.password : ''}
+              // errorMessage={touched.password ? errors.password : ''}
             />
 
             <Button
@@ -79,7 +80,7 @@ const LoginPage: React.FC = () => {
           </form>
           <p className="account-link">
             Don't Have An Account?{' '}
-            <span onClick={() => navigate('/register')} className=" underline cursor-pointer">
+            <span onClick={() => navigate('/register')} className="underline cursor-pointer">
               Sign Up
             </span>
           </p>

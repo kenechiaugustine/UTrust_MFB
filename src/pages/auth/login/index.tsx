@@ -36,7 +36,7 @@ const LoginPage: React.FC = () => {
       });
   };
 
-  const { values, handleChange, touched, errors, handleSubmit } = useFormik({
+  const { values, handleChange, handleSubmit } = useFormik({
     initialValues: {
       email: '',
       password: '',
